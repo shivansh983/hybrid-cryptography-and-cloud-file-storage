@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation - Sensitive Data Upload</title>
+  <link rel="stylesheet" href="../static/styles/tailwind.min.css">
+  <style>
+    body {
+      background-color: black;
+      color: #f2ebe9;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background-color: transparent;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .btn.upload {
+      background-color: #3498db;
+      color: #fff;
+    }
+    .btn.upload:hover {
+      background-color: #2980b9;
+    }
+    .btn.home {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+    .btn.home:hover {
+      background-color: #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl mt-10 font-bold">SECURE<span class="text-blue-600">!</span>LITE</h1>
+      <h2 class="lg:text-lg mt-2">Secure File Storage Using <em>`Hybr!d Cryptography`</em></h2>
+      <form action="/data" method="POST" enctype="multipart/form-data">
+        <div class="text-center mt-5">
+          <p class="font-semibold">Sensitive data found in your file. Please confirm upload:</p>
+          <div class="btn-group">
+            <button type="Confirm" class="btn upload">Confirm Upload</button>
+            <a href="/home" class="btn home">Back to Home</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
